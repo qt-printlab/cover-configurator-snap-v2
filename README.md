@@ -1,0 +1,1 @@
+# cover-configurator-snap-v2
