@@ -1,0 +1,40 @@
+.containerTabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.875rem;
+  padding: 20px 0px 20px 0px;
+  width: 100%;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    width: 20%;
+    height: 0.5px;
+    background-color: #484848;
+    transform: translateX(-50%);
+  }
+
+  &::after {
+    left: 0;
+    bottom: 0;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.5px;
+    background-color: #484848;
+  }
+
+  .tabStyle {
+    cursor: pointer;
+    padding: 8px 7px;
+    color: #fff;
+    border: none;
+    background-color: var(--main-color-configurator-qt);
+    font-size: 0.875rem;
+  }
+}

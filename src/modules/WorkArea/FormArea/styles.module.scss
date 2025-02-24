@@ -1,0 +1,15 @@
+.wrapperFormArea {
+  width: 100%;
+  background: transparent;
+  box-sizing: border-box;
+
+  .containerFormComponents {
+    width: 100%;
+  }
+  .contentFormArea {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

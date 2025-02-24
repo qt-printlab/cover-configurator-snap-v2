@@ -1,0 +1,10 @@
+{
+  "header": {
+    "closeConfiguratorTitle": "Close",
+    "saveConfigurator": "Save configurator"
+  },
+  "tabs": {
+    "standardEmbossing": "Standard Embossing",
+    "spineEmbossing": "Spine Embossing"
+  }
+}

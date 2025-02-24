@@ -1,0 +1,11 @@
+{
+  "header": {
+    "closeConfiguratorTitle": "Wyjdź",
+    "saveConfigurator": "Zapisz album"
+  },
+
+  "tabs": {
+    "standardEmbossing": "Tłoczenie na okładce",
+    "spineEmbossing": "Tłoczenie na grzbiecie"
+  }
+}

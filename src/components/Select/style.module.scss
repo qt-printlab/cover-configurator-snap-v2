@@ -1,0 +1,12 @@
+.selectStyle {
+  height: 29px;
+  border: 1px solid rgb(9, 9, 9);
+  padding-left: 5px;
+  padding-right: 5px;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+    border: 1px solid var(--outline-main-elements);
+  }
+}

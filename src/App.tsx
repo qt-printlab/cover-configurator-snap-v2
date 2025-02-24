@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from "./modules/Header/Header";
+import Modal from "./components/Modal/Modal";
+import { useSelector } from "react-redux";
+import { RootState } from "./redux/store/store";
+import useGetConfigurationData from "./hooks/configuration/useGetConfigurationData";
+import ConfiguratorWorkArea from "./modules/WorkArea/ConfiguratorWorkArea";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  const isConfiguratorOpen = useSelector(
+    (state: RootState) => state.albumConfiguration.isConfiguratorOpen
   );
+
+  useGetConfigurationData();
+
+  return isConfiguratorOpen ? (
+    <Modal>
+      <Header onClose={() => null} />
+      <ConfiguratorWorkArea />
+    </Modal>
+  ) : null;
 }
 
 export default App;

@@ -1,0 +1,26 @@
+.optionSelectorWrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+
+  .selectedClassName {
+    outline: 2.5px solid var(--outline-main-elements);
+  }
+  .containerWithOptions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+
+    img {
+      width: 100px;
+      height: 100px;
+    }
+
+    .itemLabel {
+      font-size: 12px;
+    }
+  }
+}

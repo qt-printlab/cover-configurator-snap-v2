@@ -10,34 +10,1174 @@
       content="Web site created using create-react-app"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <title>Cover Configurator V2</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <div id="CoverConfiguratorV2"></div>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: flex-start;
+      "
+    >
+      <div class="bold_option bold_option_dropdown">
+        <label>
+          <span class="bold_option_title" style="font-weight: 800">
+            Materiał okładki*
+          </span>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+          <span class="bold_option_element"
+            ><select
+              name="properties[Materiał okładki]"
+              class="dd_915336_760752"
+              data-gtm-form-interact-field-id="1"
+            >
+              <option value="" aria-selected="false">Wybierz:</option>
+              <option
+                value="Okładki Standard (Płótno / LUX)"
+                aria-selected="true"
+                data-option_value_key="0"
+              >
+                Okładki Standard (Płótno / LUX)
+              </option>
+              <option
+                value="Okładki Eco Velvet"
+                aria-selected="false"
+                data-option_value_key="1"
+              >
+                Okładki Eco Velvet
+              </option>
+              <option
+                value="Okładki Flores"
+                aria-selected="false"
+                data-option_value_key="2"
+              >
+                Okładki Flores
+              </option>
+              <option
+                value="Okładki Velurowe"
+                aria-selected="false"
+                data-option_value_key="3"
+              >
+                Okładki Velurowe [+30,00 PLN]
+              </option>
+              <option
+                value="Okładki Suede"
+                aria-selected="false"
+                data-option_value_key="4"
+              >
+                Okładki Suede [+30,00 PLN]
+              </option>
+              <option
+                value="Okładki Skórzane"
+                aria-selected="false"
+                data-option_value_key="5"
+              >
+                Okładki Skórzane [+85,00 PLN]
+              </option>
+              <option
+                value="Okładki Jedwabne"
+                aria-selected="false"
+                data-option_value_key="6"
+              >
+                Okładki Jedwabne [+85,00 PLN]
+              </option>
+            </select></span
+          >
+        </label>
+      </div>
+
+      <div class="bold_option bold_option_swatch">
+        <span class="bold_option_title" style="font-weight: 800"
+          >Okładki Standard*</span
+        >
+
+        <span class="bold_option_element">
+          <span class="bold_option_value">
+            <label>
+              <span
+                class="bold_option_value_element"
+                role="checkbox"
+                aria-checked="false"
+                aria-label=" color option: PREMIUM PASTEL White   "
+                tabindex="0"
+                data-listener-bound="true"
+              >
+                <span class="bold_option_value_swatch"
+                  ><span
+                    style="
+                      background-image: url('https://static.shopapps.site/options/swatch/478319/3e5773c25b8c16548014d540e43dbcf5.jpeg');
+                    "
+                  ></span></span
+                ><input
+                  type="checkbox"
+                  class="sw_912403_760752"
+                  value="PREMIUM PASTEL White"
+                  data-option_value_key="0"
+                />
+              </span>
+              <span
+                class="bold_option_swatch_title"
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <span class="bold_option_value_title"
+                  >PREMIUM PASTEL White</span
+                >
+              </span>
+            </label>
+          </span>
+          <span class="bold_option_value">
+            <label>
+              <span
+                class="bold_option_value_element"
+                role="checkbox"
+                aria-checked="false"
+                aria-label=" color option: NATURAL Beige   "
+                tabindex="0"
+                data-listener-bound="true"
+              >
+                <span class="bold_option_value_swatch"
+                  ><span
+                    style="
+                      background-image: url('https://static.shopapps.site/options/swatch/478319/3e9359ee557e9ac1505497730b361188.jpeg');
+                    "
+                  ></span></span
+                ><input
+                  type="checkbox"
+                  class="sw_912403_760752"
+                  value="NATURAL Beige"
+                  data-option_value_key="1"
+                />
+              </span>
+              <span
+                class="bold_option_swatch_title"
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <span class="bold_option_value_title">NATURAL Beige</span>
+              </span>
+            </label>
+          </span>
+          <span class="bold_option_value">
+            <label>
+              <span
+                class="bold_option_value_element"
+                role="checkbox"
+                aria-checked="false"
+                aria-label=" color option: NATURAL Raw Linen   "
+                tabindex="0"
+                data-listener-bound="true"
+              >
+                <span class="bold_option_value_swatch"
+                  ><span
+                    style="
+                      background-image: url('https://static.shopapps.site/options/swatch/478319/56a1e132d8e85b154171dfdba76d452e.jpeg');
+                    "
+                  ></span></span
+                ><input
+                  type="checkbox"
+                  class="sw_912403_760752"
+                  value="NATURAL Raw Linen"
+                  data-option_value_key="2"
+                />
+              </span>
+              <span
+                class="bold_option_swatch_title"
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <span class="bold_option_value_title">NATURAL Raw Linen</span>
+              </span>
+            </label>
+          </span>
+          <span class="bold_option_value">
+            <label>
+              <span
+                class="bold_option_value_element"
+                role="checkbox"
+                aria-checked="false"
+                aria-label=" color option: NATURAL Gray   "
+                tabindex="0"
+                data-listener-bound="true"
+              >
+                <span class="bold_option_value_swatch"
+                  ><span
+                    style="
+                      background-image: url('https://static.shopapps.site/options/swatch/478319/4e699d5f4a9b1423d1fd86d50edd4ee8.png');
+                    "
+                  ></span></span
+                ><input
+                  type="checkbox"
+                  class="sw_912403_760752"
+                  value="NATURAL Gray"
+                  data-option_value_key="3"
+                />
+              </span>
+              <span
+                class="bold_option_swatch_title"
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <span class="bold_option_value_title">NATURAL Gray</span>
+              </span>
+            </label>
+          </span>
+          <span class="bold_option_value">
+            <label>
+              <span
+                class="bold_option_value_element"
+                role="checkbox"
+                aria-checked="false"
+                aria-label=" color option: PREMIUM PASTEL Earth Gray   "
+                tabindex="0"
+                data-listener-bound="true"
+              >
+                <span class="bold_option_value_swatch"
+                  ><span
+                    style="
+                      background-image: url('https://static.shopapps.site/options/swatch/478319/f0296e048fd74fd6111f2fd13e82bdf1.jpeg');
+                    "
+                  ></span></span
+                ><input
+                  type="checkbox"
+                  class="sw_912403_760752"
+                  value="PREMIUM PASTEL Earth Gray"
+                  data-option_value_key="4"
+                />
+              </span>
+              <span
+                class="bold_option_swatch_title"
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <span class="bold_option_value_title"
+                  >PREMIUM PASTEL Earth Gray</span
+                >
+              </span>
+            </label>
+          </span>
+          <span class="bold_option_value">
+            <label>
+              <span
+                class="bold_option_value_element"
+                role="checkbox"
+                aria-checked="false"
+                aria-label=" color option: PREMIUM PASTEL Old Rosa   "
+                tabindex="0"
+                data-listener-bound="true"
+              >
+                <span class="bold_option_value_swatch"
+                  ><span
+                    style="
+                      background-image: url('https://static.shopapps.site/options/swatch/478319/de49748b2416758161b499910317d29a.jpeg');
+                    "
+                  ></span></span
+                ><input
+                  type="checkbox"
+                  class="sw_912403_760752"
+                  value="PREMIUM PASTEL Old Rosa"
+                  data-option_value_key="5"
+                />
+              </span>
+              <span
+                class="bold_option_swatch_title"
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <span class="bold_option_value_title"
+                  >PREMIUM PASTEL Old Rosa</span
+                >
+              </span>
+            </label>
+          </span>
+          <span class="bold_option_value">
+            <label>
+              <span
+                class="bold_option_value_element"
+                role="checkbox"
+                aria-checked="false"
+                aria-label=" color option: PREMIUM PASTEL Greige   "
+                tabindex="0"
+                data-listener-bound="true"
+              >
+                <span class="bold_option_value_swatch"
+                  ><span
+                    style="
+                      background-image: url('https://static.shopapps.site/options/swatch/478319/f363d6f1cd538a966aef106db3e147d5.jpeg');
+                    "
+                  ></span></span
+                ><input
+                  type="checkbox"
+                  class="sw_912403_760752"
+                  value="PREMIUM PASTEL Greige"
+                  data-option_value_key="6"
+                />
+              </span>
+              <span
+                class="bold_option_swatch_title"
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <span class="bold_option_value_title"
+                  >PREMIUM PASTEL Greige</span
+                >
+              </span>
+            </label>
+          </span>
+          <span class="bold_option_value">
+            <label>
+              <span
+                class="bold_option_value_element bold_swatch_selected"
+                role="checkbox"
+                aria-checked="true"
+                aria-label=" color option: PREMIUM PASTEL Arctic   "
+                tabindex="0"
+                data-listener-bound="true"
+              >
+                <span class="bold_option_value_swatch"
+                  ><span
+                    style="
+                      background-image: url('https://static.shopapps.site/options/swatch/478319/33201c829bff2a41ccd91eaf6d52cfe7.jpeg');
+                    "
+                  ></span></span
+                ><input
+                  type="checkbox"
+                  class="sw_912403_760752"
+                  value="PREMIUM PASTEL Arctic"
+                  data-option_value_key="7"
+                  data-gtm-form-interact-field-id="2"
+                />
+              </span>
+              <span
+                class="bold_option_swatch_title"
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <span class="bold_option_value_title"
+                  >PREMIUM PASTEL Arctic</span
+                >
+              </span>
+            </label>
+          </span>
+          <span class="bold_option_value">
+            <label>
+              <span
+                class="bold_option_value_element"
+                role="checkbox"
+                aria-checked="false"
+                aria-label=" color option: PREMIUM PASTEL Mauve   "
+                tabindex="0"
+                data-listener-bound="true"
+              >
+                <span class="bold_option_value_swatch"
+                  ><span
+                    style="
+                      background-image: url('https://static.shopapps.site/options/swatch/478319/b0848b5bf38bd28f8dbe06eab5cc2372.jpeg');
+                    "
+                  ></span></span
+                ><input
+                  type="checkbox"
+                  class="sw_912403_760752"
+                  value="PREMIUM PASTEL Mauve"
+                  data-option_value_key="8"
+                />
+              </span>
+              <span
+                class="bold_option_swatch_title"
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <span class="bold_option_value_title"
+                  >PREMIUM PASTEL Mauve</span
+                >
+              </span>
+            </label>
+          </span>
+          <span class="bold_option_value">
+            <label>
+              <span
+                class="bold_option_value_element"
+                role="checkbox"
+                aria-checked="false"
+                aria-label=" color option: PREMIUM PASTEL Turquoise   "
+                tabindex="0"
+                data-listener-bound="true"
+              >
+                <span class="bold_option_value_swatch"
+                  ><span
+                    style="
+                      background-image: url('https://static.shopapps.site/options/swatch/478319/9515d0454f88cc3ea9a3a1712ddec653.jpeg');
+                    "
+                  ></span></span
+                ><input
+                  type="checkbox"
+                  class="sw_912403_760752"
+                  value="PREMIUM PASTEL Turquoise"
+                  data-option_value_key="9"
+                />
+              </span>
+              <span
+                class="bold_option_swatch_title"
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <span class="bold_option_value_title"
+                  >PREMIUM PASTEL Turquoise</span
+                >
+              </span>
+            </label>
+          </span>
+          <span class="bold_option_value">
+            <label>
+              <span
+                class="bold_option_value_element"
+                role="checkbox"
+                aria-checked="false"
+                aria-label=" color option: PREMIUM PASTEL Dusty Pink   "
+                tabindex="0"
+                data-listener-bound="true"
+              >
+                <span class="bold_option_value_swatch"
+                  ><span
+                    style="
+                      background-image: url('https://static.shopapps.site/options/swatch/478319/befc9b9ff56148591913fd9f8cf73a3d.jpeg');
+                    "
+                  ></span></span
+                ><input
+                  type="checkbox"
+                  class="sw_912403_760752"
+                  value="PREMIUM PASTEL Dusty Pink"
+                  data-option_value_key="10"
+                />
+              </span>
+              <span
+                class="bold_option_swatch_title"
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <span class="bold_option_value_title"
+                  >PREMIUM PASTEL Dusty Pink</span
+                >
+              </span>
+            </label>
+          </span>
+          <span class="bold_option_value">
+            <label>
+              <span
+                class="bold_option_value_element"
+                role="checkbox"
+                aria-checked="false"
+                aria-label=" color option: PREMIUM PASTEL Duck Egg   "
+                tabindex="0"
+                data-listener-bound="true"
+              >
+                <span class="bold_option_value_swatch"
+                  ><span
+                    style="
+                      background-image: url('https://static.shopapps.site/options/swatch/478319/34643bcaf8be2e53bcf4587025caad74.jpeg');
+                    "
+                  ></span></span
+                ><input
+                  type="checkbox"
+                  class="sw_912403_760752"
+                  value="PREMIUM PASTEL Duck Egg"
+                  data-option_value_key="11"
+                />
+              </span>
+              <span
+                class="bold_option_swatch_title"
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <span class="bold_option_value_title"
+                  >PREMIUM PASTEL Duck Egg</span
+                >
+              </span>
+            </label>
+          </span>
+          <span class="bold_option_value">
+            <label>
+              <span
+                class="bold_option_value_element"
+                role="checkbox"
+                aria-checked="false"
+                aria-label=" color option: PREMIUM PASTEL Sage   "
+                tabindex="0"
+                data-listener-bound="true"
+              >
+                <span class="bold_option_value_swatch"
+                  ><span
+                    style="
+                      background-image: url('https://static.shopapps.site/options/swatch/478319/63c3c470e30fe91cf96f1cb03c7ec5ad.jpeg');
+                    "
+                  ></span></span
+                ><input
+                  type="checkbox"
+                  class="sw_912403_760752"
+                  value="PREMIUM PASTEL Sage"
+                  data-option_value_key="12"
+                />
+              </span>
+              <span
+                class="bold_option_swatch_title"
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <span class="bold_option_value_title">PREMIUM PASTEL Sage</span>
+              </span>
+            </label>
+          </span>
+          <span class="bold_option_value">
+            <label>
+              <span
+                class="bold_option_value_element"
+                role="checkbox"
+                aria-checked="false"
+                aria-label=" color option: PREMIUM PASTEL Granite   "
+                tabindex="0"
+                data-listener-bound="true"
+              >
+                <span class="bold_option_value_swatch"
+                  ><span
+                    style="
+                      background-image: url('https://static.shopapps.site/options/swatch/478319/bb03c3e5ff9f76a69f5829a712d01cd1.jpeg');
+                    "
+                  ></span></span
+                ><input
+                  type="checkbox"
+                  class="sw_912403_760752"
+                  value="PREMIUM PASTEL Granite"
+                  data-option_value_key="13"
+                />
+              </span>
+              <span
+                class="bold_option_swatch_title"
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <span class="bold_option_value_title"
+                  >PREMIUM PASTEL Granite</span
+                >
+              </span>
+            </label>
+          </span>
+          <span class="bold_option_value">
+            <label>
+              <span
+                class="bold_option_value_element"
+                role="checkbox"
+                aria-checked="false"
+                aria-label=" color option: LUX Gray   "
+                tabindex="0"
+                data-listener-bound="true"
+              >
+                <span class="bold_option_value_swatch"
+                  ><span
+                    style="
+                      background-image: url('https://static.shopapps.site/options/swatch/478319/69aff2c850da36e0d51e0e1bf17a44b5.jpeg');
+                    "
+                  ></span></span
+                ><input
+                  type="checkbox"
+                  class="sw_912403_760752"
+                  value="LUX Gray"
+                  data-option_value_key="14"
+                />
+              </span>
+              <span
+                class="bold_option_swatch_title"
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <span class="bold_option_value_title">LUX Gray</span>
+              </span>
+            </label>
+          </span>
+          <span class="bold_option_value">
+            <label>
+              <span
+                class="bold_option_value_element"
+                role="checkbox"
+                aria-checked="false"
+                aria-label=" color option: LUX Orchidee   "
+                tabindex="0"
+                data-listener-bound="true"
+              >
+                <span class="bold_option_value_swatch"
+                  ><span
+                    style="
+                      background-image: url('https://static.shopapps.site/options/swatch/478319/c6a37e27265fa4786432b037539575a7.jpeg');
+                    "
+                  ></span></span
+                ><input
+                  type="checkbox"
+                  class="sw_912403_760752"
+                  value="LUX Orchidee"
+                  data-option_value_key="15"
+                />
+              </span>
+              <span
+                class="bold_option_swatch_title"
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <span class="bold_option_value_title">LUX Orchidee</span>
+              </span>
+            </label>
+          </span>
+          <span class="bold_option_value">
+            <label>
+              <span
+                class="bold_option_value_element"
+                role="checkbox"
+                aria-checked="false"
+                aria-label=" color option: LUX Rosa   "
+                tabindex="0"
+                data-listener-bound="true"
+              >
+                <span class="bold_option_value_swatch"
+                  ><span
+                    style="
+                      background-image: url('https://static.shopapps.site/options/swatch/478319/97b017e5d08c85eaea4e858bdcd3fc42.jpeg');
+                    "
+                  ></span></span
+                ><input
+                  type="checkbox"
+                  class="sw_912403_760752"
+                  value="LUX Rosa"
+                  data-option_value_key="16"
+                />
+              </span>
+              <span
+                class="bold_option_swatch_title"
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <span class="bold_option_value_title">LUX Rosa</span>
+              </span>
+            </label>
+          </span>
+          <span class="bold_option_value">
+            <label>
+              <span
+                class="bold_option_value_element"
+                role="checkbox"
+                aria-checked="false"
+                aria-label=" color option: LUX Turquoise   "
+                tabindex="0"
+                data-listener-bound="true"
+              >
+                <span class="bold_option_value_swatch"
+                  ><span
+                    style="
+                      background-image: url('https://static.shopapps.site/options/swatch/478319/4550f8e36a21a704c28ba2febd117412.jpeg');
+                    "
+                  ></span></span
+                ><input
+                  type="checkbox"
+                  class="sw_912403_760752"
+                  value="LUX Turquoise"
+                  data-option_value_key="17"
+                />
+              </span>
+              <span
+                class="bold_option_swatch_title"
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <span class="bold_option_value_title">LUX Turquoise</span>
+              </span>
+            </label>
+          </span>
+          <span class="bold_option_value">
+            <label>
+              <span
+                class="bold_option_value_element"
+                role="checkbox"
+                aria-checked="false"
+                aria-label=" color option: LUX Cherry   "
+                tabindex="0"
+                data-listener-bound="true"
+              >
+                <span class="bold_option_value_swatch"
+                  ><span
+                    style="
+                      background-image: url('https://static.shopapps.site/options/swatch/478319/5ba18f680876377e24602676adc2641d.jpeg');
+                    "
+                  ></span></span
+                ><input
+                  type="checkbox"
+                  class="sw_912403_760752"
+                  value="LUX Cherry"
+                  data-option_value_key="18"
+                />
+              </span>
+              <span
+                class="bold_option_swatch_title"
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <span class="bold_option_value_title">LUX Cherry</span>
+              </span>
+            </label>
+          </span>
+          <span class="bold_option_value">
+            <label>
+              <span
+                class="bold_option_value_element"
+                role="checkbox"
+                aria-checked="false"
+                aria-label=" color option: LUX Navy   "
+                tabindex="0"
+                data-listener-bound="true"
+              >
+                <span class="bold_option_value_swatch"
+                  ><span
+                    style="
+                      background-image: url('https://static.shopapps.site/options/swatch/478319/88954bacbeee98f793f64b6414467059.jpeg');
+                    "
+                  ></span></span
+                ><input
+                  type="checkbox"
+                  class="sw_912403_760752"
+                  value="LUX Navy"
+                  data-option_value_key="19"
+                />
+              </span>
+              <span
+                class="bold_option_swatch_title"
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <span class="bold_option_value_title">LUX Navy</span>
+              </span>
+            </label>
+          </span>
+          <span class="bold_option_value">
+            <label>
+              <span
+                class="bold_option_value_element"
+                role="checkbox"
+                aria-checked="false"
+                aria-label=" color option: LUX Sky   "
+                tabindex="0"
+                data-listener-bound="true"
+              >
+                <span class="bold_option_value_swatch"
+                  ><span
+                    style="
+                      background-image: url('https://static.shopapps.site/options/swatch/478319/427d60b366efd1bd3902ccacbe7ffc5e.png');
+                    "
+                  ></span></span
+                ><input
+                  type="checkbox"
+                  class="sw_912403_760752"
+                  value="LUX Sky"
+                  data-option_value_key="20"
+                />
+              </span>
+              <span
+                class="bold_option_swatch_title"
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <span class="bold_option_value_title">LUX Sky</span>
+              </span>
+            </label>
+          </span>
+          <span class="bold_option_value">
+            <label>
+              <span
+                class="bold_option_value_element"
+                role="checkbox"
+                aria-checked="false"
+                aria-label=" color option: LUX Candy Pink   "
+                tabindex="0"
+                data-listener-bound="true"
+              >
+                <span class="bold_option_value_swatch"
+                  ><span
+                    style="
+                      background-image: url('https://static.shopapps.site/options/swatch/478319/543ad10a14c827936b28e42c84f8a0ca.png');
+                    "
+                  ></span></span
+                ><input
+                  type="checkbox"
+                  class="sw_912403_760752"
+                  value="LUX Candy Pink"
+                  data-option_value_key="21"
+                />
+              </span>
+              <span
+                class="bold_option_swatch_title"
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <span class="bold_option_value_title">LUX Candy Pink</span>
+              </span>
+            </label>
+          </span>
+          <span class="bold_option_value">
+            <label>
+              <span
+                class="bold_option_value_element"
+                role="checkbox"
+                aria-checked="false"
+                aria-label=" color option: LUX Sunflower   "
+                tabindex="0"
+                data-listener-bound="true"
+              >
+                <span class="bold_option_value_swatch"
+                  ><span
+                    style="
+                      background-image: url('https://static.shopapps.site/options/swatch/478319/a7ca908ded72a4e6134c19ce0d164a72.png');
+                    "
+                  ></span></span
+                ><input
+                  type="checkbox"
+                  class="sw_912403_760752"
+                  value="LUX Sunflower"
+                  data-option_value_key="22"
+                /><input
+                  type="hidden"
+                  class="sw_912403_760752_helper"
+                  name="properties[Okładki Standard]"
+                  value="PREMIUM PASTEL Arctic"
+                />
+              </span>
+              <span
+                class="bold_option_swatch_title"
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <span class="bold_option_value_title">LUX Sunflower</span>
+              </span>
+            </label>
+          </span>
+        </span>
+      </div>
+
+      <div class="bold_option bold_option_checkboxmulti">
+        <span class="bold_option_title" style="font-weight: 800"
+          >Personalizacja okładki</span
+        >
+
+        <span class="bold_option_element">
+          <span class="bold_option_value">
+            <label>
+              <span class="bold_option_value_element"
+                ><input
+                  type="checkbox"
+                  class="cbm_1963368_760752"
+                  value="Standard Embossing"
+                  data-option_value_key="0"
+                  style="pointer-events: none"
+              /></span>
+
+              <span class="bold_option_value_title"
+                >Tłoczenie na okładce<img
+                  src="https://cdn.shopify.com/s/files/1/0061/8967/8695/t/10/assets/info.svg"
+                  class="info-icon lightbox"
+                  style="
+                    cursor: pointer;
+                    height: 15px;
+                    width: 15px;
+                    margin-left: 5px;
+                    position: relative;
+                    top: 3px;
+                  "
+              /></span>
+
+              <span class="bold_option_value_price">25,00 PLN</span>
+            </label>
+          </span>
+          <span class="bold_option_value">
+            <label>
+              <span class="bold_option_value_element"
+                ><input
+                  type="checkbox"
+                  class="cbm_1963368_760752"
+                  value="Spine Embossing"
+                  data-option_value_key="1"
+                  style="pointer-events: none"
+              /></span>
+
+              <span class="bold_option_value_title"
+                >Tłoczenie na grzbiecie<img
+                  src="https://cdn.shopify.com/s/files/1/0061/8967/8695/t/10/assets/info.svg"
+                  class="info-icon lightbox"
+                  style="
+                    cursor: pointer;
+                    height: 15px;
+                    width: 15px;
+                    margin-left: 5px;
+                    position: relative;
+                    top: 3px;
+                  "
+              /></span>
+
+              <span class="bold_option_value_price">25,00 PLN</span>
+            </label>
+          </span>
+          <span class="bold_option_value">
+            <label>
+              <span class="bold_option_value_element"
+                ><input
+                  type="checkbox"
+                  class="cbm_1963368_760752"
+                  value="Studio logo fotografa"
+                  data-option_value_key="2"
+                  style="pointer-events: none"
+              /></span>
+
+              <span class="bold_option_value_title"
+                >Studio logo fotografa<img
+                  src="https://cdn.shopify.com/s/files/1/0061/8967/8695/t/10/assets/info.svg"
+                  class="info-icon lightbox"
+                  style="
+                    cursor: pointer;
+                    height: 15px;
+                    width: 15px;
+                    margin-left: 5px;
+                    position: relative;
+                    top: 3px;
+                  "
+              /></span>
+
+              <span class="bold_option_value_price">25,00 PLN</span>
+            </label>
+          </span>
+          <span class="bold_option_value">
+            <label>
+              <span class="bold_option_value_element"
+                ><input
+                  type="checkbox"
+                  class="cbm_1963368_760752"
+                  value="Tłoczenie z matrycy - własny tekst"
+                  data-option_value_key="3"
+                  style="pointer-events: none"
+              /></span>
+
+              <span class="bold_option_value_title"
+                >Tłoczenie z matrycy - własny tekst<img
+                  src="https://cdn.shopify.com/s/files/1/0061/8967/8695/t/10/assets/info.svg"
+                  class="info-icon lightbox"
+                  style="
+                    cursor: pointer;
+                    height: 15px;
+                    width: 15px;
+                    margin-left: 5px;
+                    position: relative;
+                    top: 3px;
+                  "
+              /></span>
+
+              <span class="bold_option_value_price">25,00 PLN</span>
+            </label>
+          </span>
+          <span class="bold_option_value">
+            <label>
+              <span class="bold_option_value_element"
+                ><input
+                  type="checkbox"
+                  class="cbm_1963368_760752"
+                  value="Tłoczenie z matrycy - własna grafika"
+                  data-option_value_key="4"
+                  style="pointer-events: none"
+              /></span>
+
+              <span class="bold_option_value_title"
+                >Tłoczenie z matrycy - własna grafika<img
+                  src="https://cdn.shopify.com/s/files/1/0061/8967/8695/t/10/assets/info.svg"
+                  class="info-icon lightbox"
+                  style="
+                    cursor: pointer;
+                    height: 15px;
+                    width: 15px;
+                    margin-left: 5px;
+                    position: relative;
+                    top: 3px;
+                  "
+              /></span>
+
+              <span class="bold_option_value_price">25,00 PLN</span>
+            </label>
+          </span>
+          <span class="bold_option_value">
+            <label>
+              <span class="bold_option_value_element"
+                ><input
+                  type="checkbox"
+                  class="cbm_1963368_760752"
+                  value="Tłoczenie z naszej matrycy"
+                  data-option_value_key="5"
+                  style="pointer-events: none"
+              /></span>
+
+              <span class="bold_option_value_title"
+                >Tłoczenie z naszej matrycy<img
+                  src="https://cdn.shopify.com/s/files/1/0061/8967/8695/t/10/assets/info.svg"
+                  class="info-icon lightbox"
+                  style="
+                    cursor: pointer;
+                    height: 15px;
+                    width: 15px;
+                    margin-left: 5px;
+                    position: relative;
+                    top: 3px;
+                  "
+              /></span>
+
+              <span class="bold_option_value_price">25,00 PLN</span>
+            </label>
+          </span>
+          <span class="bold_option_value">
+            <label>
+              <span class="bold_option_value_element"
+                ><input
+                  type="checkbox"
+                  class="cbm_1963368_760752"
+                  value="Okienko ze zdjęciem"
+                  data-option_value_key="6"
+                  style="pointer-events: none"
+              /></span>
+
+              <span class="bold_option_value_title"
+                >Okienko ze zdjęciem<img
+                  src="https://cdn.shopify.com/s/files/1/0061/8967/8695/t/10/assets/info.svg"
+                  class="info-icon lightbox"
+                  style="
+                    cursor: pointer;
+                    height: 15px;
+                    width: 15px;
+                    margin-left: 5px;
+                    position: relative;
+                    top: 3px;
+                  "
+              /></span>
+
+              <span class="bold_option_value_price">25,00 PLN</span>
+            </label>
+          </span>
+          <span class="bold_option_value">
+            <label>
+              <span class="bold_option_value_element"
+                ><input
+                  type="checkbox"
+                  class="cbm_1963368_760752"
+                  value="Overprint"
+                  data-option_value_key="7"
+                  style="pointer-events: none"
+              /></span>
+
+              <span class="bold_option_value_title"
+                >Overprint<img
+                  src="https://cdn.shopify.com/s/files/1/0061/8967/8695/t/10/assets/info.svg"
+                  class="info-icon lightbox"
+                  style="
+                    cursor: pointer;
+                    height: 15px;
+                    width: 15px;
+                    margin-left: 5px;
+                    position: relative;
+                    top: 3px;
+                  "
+              /></span>
+
+              <span class="bold_option_value_price">25,00 PLN</span>
+            </label>
+          </span>
+          <span class="bold_option_value">
+            <label>
+              <span class="bold_option_value_element"
+                ><input
+                  type="checkbox"
+                  class="cbm_1963368_760752"
+                  value="Overprint - grafika"
+                  data-option_value_key="8"
+                  style="pointer-events: none"
+              /></span>
+
+              <span class="bold_option_value_title"
+                >Overprint - grafika<img
+                  src="https://cdn.shopify.com/s/files/1/0061/8967/8695/t/10/assets/info.svg"
+                  class="info-icon lightbox"
+                  style="
+                    cursor: pointer;
+                    height: 15px;
+                    width: 15px;
+                    margin-left: 5px;
+                    position: relative;
+                    top: 3px;
+                  "
+              /></span>
+
+              <span class="bold_option_value_price">25,00 PLN</span>
+            </label>
+          </span>
+          <span class="bold_option_value">
+            <label>
+              <span class="bold_option_value_element"
+                ><input
+                  type="checkbox"
+                  class="cbm_1963368_760752"
+                  value="Grawer laserowy"
+                  data-option_value_key="9"
+                  style="pointer-events: none"
+                  disabled="" /><input
+                  type="hidden"
+                  class="cbm_1963368_760752_helper"
+                  name="properties[Personalizacja okładki]"
+                  value=""
+              /></span>
+
+              <span class="bold_option_value_title blockedCheckboxes"
+                >Grawer laserowy<img
+                  src="https://cdn.shopify.com/s/files/1/0061/8967/8695/t/10/assets/info.svg"
+                  class="info-icon lightbox"
+                  style="
+                    cursor: pointer;
+                    height: 15px;
+                    width: 15px;
+                    margin-left: 5px;
+                    position: relative;
+                    top: 3px;
+                  "
+              /></span>
+
+              <span class="bold_option_value_price">25,00 PLN</span>
+            </label>
+          </span>
+        </span>
+      </div>
+
+      <div
+        id="coverDataApi"
+        apiHostLink="https://shop.qtalbums.com/apps/shpfqt/get_cover_data.php"
+      ></div>
+
+      <button
+        id="configuratorOpenButton"
+        style="
+          width: fit-content;
+          padding: 5px 10px;
+          height: 40px;
+          border: 1px solid rgb(165, 165, 179);
+          background: rgb(201, 201, 219);
+          white-space: nowrap;
+          border-radius: 5px;
+        "
+      >
+        Open configurator
+      </button>
+    </div>
   </body>
 </html>

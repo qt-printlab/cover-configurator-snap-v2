@@ -1,0 +1,95 @@
+{
+  "general": {
+    "size": "10x10"
+  },
+  "standard_embossing": {
+    "linesToRender": [
+      {
+        "id": "cover_front_standard_embossing_line1",
+        "count": 25,
+        "fonts": [
+          { "label": "Futura PT Book 9mm", "src": "http://dsdsdsa.pl" },
+          {
+            "label": "Futura PT Book (only digits) 6mm",
+            "src": "http://dsdsdsa.pl"
+          },
+          { "label": "Futura PT Book 5mm", "src": "http://dsdsdsa.pl" },
+          {
+            "label": "Futura PT Book (only digits) 3.5mm",
+            "src": "http://dsdsdsa.pl"
+          }
+        ]
+      },
+      {
+        "id": "cover_front_standard_embossing_line2",
+        "count": 25,
+        "fonts": [
+          { "label": "Futura PT Book 9mm", "src": "http://dsdsdsa.pl" },
+          {
+            "label": "Futura PT Book (only digits) 6mm",
+            "src": "http://dsdsdsa.pl"
+          },
+          { "label": "Futura PT Book 5mm", "src": "http://dsdsdsa.pl" },
+          {
+            "label": "Futura PT Book (only digits) 3.5mm",
+            "src": "http://dsdsdsa.pl"
+          }
+        ]
+      }
+    ],
+    "placement": [
+      {
+        "id": 1,
+        "label": "Visual Center",
+        "src": "https://shop.qtalbums.com/apps/shpfqt/info/cover_front_embossing_placement_visual_center.png"
+      },
+      {
+        "id": 2,
+        "label": "Bottom Right Corner",
+        "src": "https://shop.qtalbums.com/apps/shpfqt/info/cover_front_embossing_placement_bottom_right_corner.png"
+      },
+      {
+        "id": 3,
+        "label": "Top Center",
+        "src": "https://shop.qtalbums.com/apps/shpfqt/info/cover_front_embossing_placement_top_center.png"
+      },
+      {
+        "id": 4,
+        "label": "Center",
+        "src": "https://shop.qtalbums.com/apps/shpfqt/info/cover_front_embossing_placement_center.png"
+      }
+    ],
+    "colors": [
+      {
+        "id": 1,
+        "label": "Plain",
+        "src": "https://cdn.shopify.com/s/files/1/0061/8967/8695/t/10/assets/embossing_color_plain.png"
+      },
+      {
+        "id": 2,
+        "label": "White",
+        "src": "https://cdn.shopify.com/s/files/1/0061/8967/8695/t/10/assets/embossing_color_white.png"
+      },
+      {
+        "id": 3,
+        "label": "Gold",
+        "src": "https://cdn.shopify.com/s/files/1/0061/8967/8695/t/10/assets/embossing_color_gold.png"
+      },
+      {
+        "id": 4,
+        "label": "Silver",
+        "src": "https://cdn.shopify.com/s/files/1/0061/8967/8695/t/10/assets/embossing_color_silver.png"
+      },
+      {
+        "id": 5,
+        "label": "Copper",
+        "src": "https://cdn.shopify.com/s/files/1/0061/8967/8695/t/10/assets/embossing_color_copper.png"
+      },
+      {
+        "id": 6,
+        "label": "Black",
+        "src": "https://cdn.shopify.com/s/files/1/0061/8967/8695/t/10/assets/embossing_color_black.png"
+      }
+    ]
+  }
+}
