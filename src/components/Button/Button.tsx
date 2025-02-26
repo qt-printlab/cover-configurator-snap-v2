@@ -11,6 +11,8 @@ interface ButtonProps {
   onClick?: (event?: React.MouseEvent<HTMLButtonElement>) => void;
   isActive?: boolean;
   isLoading?: boolean;
+  form?: string;
+  style?: React.CSSProperties;
 }
 
 export const Button = ({
@@ -27,6 +29,8 @@ export const Button = ({
       type={type}
       className={className}
       disabled={isLoading || disabled}
+      style={{ ...props.style }}
+      form={props.form}
       {...props}
     >
       {isLoading ? <LoaderSpinnerIcon /> : null}

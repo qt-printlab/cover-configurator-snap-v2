@@ -4,8 +4,8 @@ import SpineEmbossingView from "../modules/WorkArea/VisualizationArea/SpineEmbos
 import StandardEmbossingView from "../modules/WorkArea/VisualizationArea/StandardEmbossingView/StandardEmbossingView";
 
 export const CHECKBOX_VALUE_TO_RENDER: Record<any, string> = {
-  isSpineEmbossing: "Spine Embossing",
-  isStandardEmbossing: "Standard Embossing",
+  spineEmbossing: "Spine Embossing",
+  standardEmbossing: "Standard Embossing",
   isStudioLogo: "Studio Logo Stamp",
   isOverprint: "Premium Overprint",
   isCustomOverprint: "Custom Overprint",
@@ -19,8 +19,8 @@ export const CHECKBOX_VALUE_TO_RENDER: Record<any, string> = {
 
 //translates
 export const TABS_LABELS: Record<any, string> = {
-  isSpineEmbossing: "tabs.spineEmbossing",
-  isStandardEmbossing: "tabs.standardEmbossing",
+  spineEmbossing: "tabs.spineEmbossing",
+  standardEmbossing: "tabs.standardEmbossing",
   isStudioLogo: "tabs.studioLogo",
   isOverprint: "tabs.premiumOverprint",
   isCustomOverprint: "tabs.customOverprint",
@@ -32,9 +32,10 @@ export const TABS_LABELS: Record<any, string> = {
   isLaserEngraving: "tabs.laserEngraving",
 };
 
+//данные ключи должны быть строго равны ключам объектов для записи альбома
 export const COMPONENT_NAMES = [
-  "isSpineEmbossing",
-  "isStandardEmbossing",
+  "spineEmbossing",
+  "standardEmbossing",
   "isStudioLogo",
   "isOverprint",
   "isCustomOverprint",
@@ -66,17 +67,17 @@ export const comboComponentsMapping: Record<any, [string, string]> = {
 };
 
 export const stateNamesMapComponents: any = {
-  isStandardEmbossing: {
+  standardEmbossing: {
     name: "Standard Embossing",
     component: StandardEmbossing,
   },
-  isSpineEmbossing: {
+  spineEmbossing: {
     name: "Spine Embossing",
     component: SpineEmbossing,
   },
 };
 
 export const visualizerComponentsMap: Record<string, React.FC> = {
-  isStandardEmbossing: StandardEmbossingView,
-  isSpineEmbossing: SpineEmbossingView,
+  standardEmbossing: StandardEmbossingView,
+  spineEmbossing: SpineEmbossingView,
 };

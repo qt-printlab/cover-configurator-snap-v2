@@ -14,7 +14,7 @@ function App() {
 
   return isConfiguratorOpen ? (
     <Modal>
-      <Header onClose={() => null} />
+      <Header />
       <ConfiguratorWorkArea />
     </Modal>
   ) : null;

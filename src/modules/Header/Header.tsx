@@ -7,10 +7,7 @@ import styles from "./styles.module.scss";
 import { useCallback } from "react";
 import { setIsModalOpen } from "../../redux/slices/configuratorSlice";
 
-interface HeaderProps {
-  onClose: () => void;
-}
-const Header = ({ onClose }: HeaderProps) => {
+const Header = () => {
   const { t } = useGetTranslations();
   const dispatch = useDispatch();
 
@@ -20,10 +17,6 @@ const Header = ({ onClose }: HeaderProps) => {
   };
   const handleCloseConfigurator = useCallback(() => {
     dispatch(setIsModalOpen(false));
-  }, []);
-
-  const handleSaveAlbum = useCallback(() => {
-    handleCloseConfigurator();
   }, []);
 
   return (
@@ -38,7 +31,11 @@ const Header = ({ onClose }: HeaderProps) => {
         </Button>
         <Logo />
 
-        <Button className={styles.buttonSaveAlbum} onClick={handleSaveAlbum}>
+        <Button
+          className={styles.buttonSaveAlbum}
+          type="submit"
+          form="configuratorForm"
+        >
           {labels.headerSaveAlbumButton}
         </Button>
       </div>

@@ -3,6 +3,8 @@ import { getElementById } from "../utils/getElementById";
 
 export const getCoverData = async () => {
   const apiHtmlElement = getElementById("coverDataApi") as HTMLElement;
+  if (!apiHtmlElement) return;
+
   const api_host_link = apiHtmlElement?.getAttribute("apiHostLink");
 
   if (!api_host_link) {

@@ -7,6 +7,7 @@ export const store = configureStore({
     albumConfiguration: configuratorSlice,
     formState: formSlice,
   },
+  devTools: true,
 });
 
 export type RootState = ReturnType<typeof store.getState>;

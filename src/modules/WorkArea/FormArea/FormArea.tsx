@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+import { useCallback, useEffect } from "react";
 import styles from "./styles.module.scss";
 import useWhichComponentRender from "../../../hooks/useWhichComponentRender";
 import Tabs from "./Tabs/Tabs";
@@ -8,16 +8,22 @@ import useGetTranslations from "../../../hooks/configuration/useGetTranslations"
 import { TABS_LABELS } from "../../../constants/globalData";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { setActiveTabKey } from "../../../redux/slices/configuratorSlice";
+import {
+  setActiveTabKey,
+  setIsModalOpen,
+} from "../../../redux/slices/configuratorSlice";
+import useSaveConfiguratorData from "../../../hooks/useSaveConfiguratorData";
+import { ConfigurationState } from "../../../redux/slices/formSlice";
 
 const FormArea = () => {
   const defaultValues = useSelector((state: any) => state.formState);
-  const methods = useForm({ defaultValues });
+  const methods = useForm({ defaultValues, mode: "onChange" });
   const dispatch = useDispatch();
 
   const { t } = useGetTranslations();
 
   const { activeTab, ActiveComponent } = useWhichComponentRender();
+  const { savedData } = useSaveConfiguratorData();
 
   const localizedTabs = activeTab.map((tab) => ({
     ...tab,
@@ -28,13 +34,27 @@ const FormArea = () => {
     dispatch(setActiveTabKey(tab.key));
   }, []);
 
+  const onSubmit = async (data: ConfigurationState) => {
+    try {
+      const savedFormData = savedData(data);
+
+      dispatch(setIsModalOpen(false));
+    } catch (error) {
+      console.error("ERROR", error);
+    }
+  };
   return (
     <FormProvider {...methods}>
       <div className={styles.wrapperFormArea}>
         <div className={styles.contentFormArea}>
           <Tabs onTabClick={handleTabSelect} activeTab={localizedTabs} />
           <div className={styles.containerFormComponents}>
-            <form>{ActiveComponent && <ActiveComponent />}</form>
+            <form
+              id="configuratorForm"
+              onSubmit={methods.handleSubmit(onSubmit)}
+            >
+              {ActiveComponent && <ActiveComponent />}
+            </form>
           </div>
         </div>
       </div>

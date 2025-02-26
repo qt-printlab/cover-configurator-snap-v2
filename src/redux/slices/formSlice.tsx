@@ -1,5 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { getCoverDataThunk } from "./configuratorSlice";
+import { UseFormReturn } from "react-hook-form";
 
 interface StandardEmbossingConfig {
   cover_front_standard_embossing_line1: string;
@@ -17,7 +18,7 @@ interface SpineEmbossingConfig {
   line3: string;
 }
 
-interface ConfigurationState {
+export interface ConfigurationState {
   standardEmbossing: StandardEmbossingConfig;
   spineEmbossing: SpineEmbossingConfig;
 }
@@ -34,10 +35,11 @@ const initialState: ConfigurationState = {
     cover_front_standard_embossing_placement: null,
   },
   spineEmbossing: {
-    line1: "",
+    line1: "Test for save",
     line2: "",
     line3: "",
   },
+  ///and others
 };
 
 const formSlice = createSlice({

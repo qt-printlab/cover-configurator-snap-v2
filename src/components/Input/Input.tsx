@@ -6,7 +6,6 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   blockInputItemClassName?: string;
   containerClassName?: string;
   error?: FieldError | { message: string } | null | any;
-  suffixIcon?: React.ElementType;
   showClear?: boolean;
   resetField?: () => void;
   readOnly?: boolean;

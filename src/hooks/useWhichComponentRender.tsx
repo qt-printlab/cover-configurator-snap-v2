@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store/store";
 import {
@@ -49,18 +49,20 @@ const useWhichComponentRender = () => {
       component: stateNamesMapComponents[key]?.component,
     }));
 
-    if (!activeTabKey && tabs.length > 0) {
-      dispatch(setActiveTabKey(tabs[0].key));
-    }
-
     return tabs;
-  }, [stateOfComponents, activeTabKey]);
+  }, [stateOfComponents]);
 
   const ActiveComponent = useMemo(() => {
     const active = activeTab.find((tab) => tab.key === activeTabKey);
 
     return active ? active.component : null;
   }, [activeTab, activeTabKey]);
+
+  useEffect(() => {
+    if (!activeTabKey && activeTab.length > 0) {
+      dispatch(setActiveTabKey(activeTab[0].key));
+    }
+  }, [activeTabKey, activeTab, dispatch]);
 
   return {
     stateOfComponents,

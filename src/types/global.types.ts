@@ -26,7 +26,7 @@ export interface ActiveTabProps {
 }
 
 export interface TabProps {
-  activeTab: ActiveTabProps[];
+  activeTab: ActiveTabProps[] | any;
   onTabClick: (tab: ActiveTabProps) => void;
 }
 

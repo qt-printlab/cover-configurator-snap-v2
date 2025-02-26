@@ -2,22 +2,14 @@ import { getElementById } from "../../utils/getElementById";
 import {
   getCoverDataThunk,
   setAlbumPersonalizations,
-  setIsModalOpen,
 } from "../../redux/slices/configuratorSlice";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useMutationObserver } from "../useMutationObserver";
 import { useCallback, useEffect } from "react";
 import { store } from "../../redux/store/store";
 
 const useGetConfigurationData = () => {
   const dispatch = useDispatch();
-  const state = useSelector((state: any) => state.albumConfiguration);
-
-  useEffect(() => {
-    if (state) {
-      console.log("state", state);
-    }
-  }, [state]);
 
   //open configurator button
   const attachButtonHandler = () => {
@@ -25,8 +17,8 @@ const useGetConfigurationData = () => {
     if (buttonOpenConfigurator) {
       buttonOpenConfigurator.addEventListener(
         "click",
-        () => store.dispatch(getCoverDataThunk())
-        // dispatch(setIsModalOpen(true))getCoverDataThunk
+        () => store.dispatch(getCoverDataThunk()),
+        { once: true }
       );
     } else {
       console.warn("Button not found yet");

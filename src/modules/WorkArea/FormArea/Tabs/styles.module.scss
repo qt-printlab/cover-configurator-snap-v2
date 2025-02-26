@@ -8,6 +8,9 @@
   width: 100%;
   position: relative;
 
+  .activeTab {
+    opacity: 0.6;
+  }
   &::before {
     content: "";
     position: absolute;

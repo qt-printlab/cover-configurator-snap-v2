@@ -18,7 +18,6 @@ type InputFormFieldProps = {
     "valueAsNumber" | "valueAsDate" | "setValueAs" | "disabled"
   >;
   showClear?: boolean;
-  suffixIcon?: React.ElementType;
   maxLength?: number;
   type?: "text" | "number" | "email" | "password" | "search";
   readonly?: boolean;
@@ -32,7 +31,6 @@ export const InputFormField: React.FC<InputFormFieldProps> = ({
   containerClassName = "",
   rules,
   showClear,
-  suffixIcon,
   maxLength,
   type = "text",
   readonly,
@@ -62,7 +60,6 @@ export const InputFormField: React.FC<InputFormFieldProps> = ({
           showClear={showClear}
           resetField={() => onChange("")}
           onChange={onChange}
-          suffixIcon={suffixIcon}
           maxLength={maxLength}
           className={className}
           containerClassName={containerClassName}
