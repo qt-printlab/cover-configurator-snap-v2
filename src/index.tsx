@@ -5,6 +5,7 @@ import App from "./App";
 import { Provider } from "react-redux";
 import { store } from "./redux/store/store";
 import { getElementById } from "./utils/getElementById";
+import { ModalProvider } from "./context/ModalContext";
 
 const root = ReactDOM.createRoot(
   getElementById("CoverConfiguratorV2") as HTMLElement
@@ -13,7 +14,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <ModalProvider>
+        <App />
+      </ModalProvider>
     </Provider>
   </React.StrictMode>
 );

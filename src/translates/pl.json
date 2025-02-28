@@ -7,5 +7,11 @@
   "tabs": {
     "standardEmbossing": "Tłoczenie na okładce",
     "spineEmbossing": "Tłoczenie na grzbiecie"
+  },
+
+  "standardEmbossingForm": {
+    "validationOnlyNumbersRequired": "Dozwolone są tylko liczby. Nieprawidłowe znaki:",
+    "validationSpecialCharacters": "Użyto nieprawidłowych znaków:",
+    "changeFontsInform": "Naprawdę chcesz zmienić rozmiar, wszystkie wprowadzone dane zostaną usunięte?"
   }
 }

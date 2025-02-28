@@ -19,4 +19,8 @@
       border: 1px solid var(--outline-main-elements);
     }
   }
+  .errorMessage {
+    font-size: 14px;
+    color: var(--error-text-color);
+  }
 }

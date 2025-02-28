@@ -6,5 +6,10 @@
   "tabs": {
     "standardEmbossing": "Standard Embossing",
     "spineEmbossing": "Spine Embossing"
+  },
+  "standardEmbossingForm": {
+    "validationOnlyNumbersRequired": "Only numbers are allowed. Invalid characters:",
+    "validationSpecialCharacters": "Invalid characters used:",
+    "changeFontsInform": "Do you really want to change the size, all input will be deleted?"
   }
 }

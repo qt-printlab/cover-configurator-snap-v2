@@ -1,6 +1,8 @@
 :root {
   --main-color-configurator-qt: #3a5c5d;
   --hint-text-color: #963248;
+  --hint-standardEmbossing-extraPayment-color: rgb(245, 186, 99);
+  --error-text-color: #eb0b3b;
   --outline-main-elements: #5e8283;
 }
 

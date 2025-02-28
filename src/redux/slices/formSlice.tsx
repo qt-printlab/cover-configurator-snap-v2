@@ -7,10 +7,15 @@ interface StandardEmbossingConfig {
   cover_front_standard_embossing_line2: string;
   cover_front_standard_embossing_line3: string;
   font_cover_front_standard_embossing_line1: string;
+  font_cover_front_standard_embossing_line1_id: number | null;
   font_cover_front_standard_embossing_line2: string;
+  font_cover_front_standard_embossing_line2_id: number | null;
   font_cover_front_standard_embossing_line3: string;
+  font_cover_front_standard_embossing_line3_id: number | null;
   cover_front_embossing_color: number | null;
-  cover_front_standard_embossing_placement: number | null;
+  cover_front_standard_embossing_placement: string | null;
+  cover_front_standard_embossing_placement_id: null | number;
+  cover_front_embossing_color_id: null | number;
 }
 interface SpineEmbossingConfig {
   line1: string;
@@ -28,11 +33,19 @@ const initialState: ConfigurationState = {
     cover_front_standard_embossing_line1: "",
     cover_front_standard_embossing_line2: "",
     cover_front_standard_embossing_line3: "",
+
     font_cover_front_standard_embossing_line1: "",
+    font_cover_front_standard_embossing_line1_id: null,
     font_cover_front_standard_embossing_line2: "",
+    font_cover_front_standard_embossing_line2_id: null,
     font_cover_front_standard_embossing_line3: "",
+    font_cover_front_standard_embossing_line3_id: null,
+
     cover_front_embossing_color: null,
+    cover_front_embossing_color_id: null,
+
     cover_front_standard_embossing_placement: null,
+    cover_front_standard_embossing_placement_id: null,
   },
   spineEmbossing: {
     line1: "Test for save",
@@ -74,14 +87,30 @@ const formSlice = createSlice({
         cover_front_standard_embossing_line2: "",
         cover_front_standard_embossing_line3: "",
         font_cover_front_standard_embossing_line1:
+          coverData.standard_embossing.lines[0].fonts[0].label,
+        font_cover_front_standard_embossing_line1_id:
           coverData.standard_embossing.lines[0].fonts[0].id,
+
         font_cover_front_standard_embossing_line2:
+          coverData.standard_embossing.lines[1].fonts[0].label,
+        font_cover_front_standard_embossing_line2_id:
           coverData.standard_embossing.lines[1].fonts[0].id,
+
         font_cover_front_standard_embossing_line3:
+          coverData.standard_embossing.lines[2].fonts[0].label,
+        font_cover_front_standard_embossing_line3_id:
           coverData.standard_embossing.lines[2].fonts[0].id,
+
         cover_front_embossing_color:
+          coverData.standard_embossing.cover_front_embossing_color.values[0]
+            .label,
+        cover_front_embossing_color_id:
           coverData.standard_embossing.cover_front_embossing_color.values[0].id,
+
         cover_front_standard_embossing_placement:
+          coverData.standard_embossing.cover_front_standard_embossing_placement
+            .values[0].label,
+        cover_front_standard_embossing_placement_id:
           coverData.standard_embossing.cover_front_standard_embossing_placement
             .values[0].id,
       };

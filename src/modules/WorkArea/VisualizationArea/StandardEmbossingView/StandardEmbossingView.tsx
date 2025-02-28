@@ -1,30 +1,18 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useFormState } from "../../../../context";
 
 const StandardEmbossingView = () => {
-  const defaultValuesStandardEmbossing = useSelector(
-    (state: any) => state.formState.standardEmbossing
-  );
+  const { standardEmbossing } = useFormState();
 
   return (
     <div>
       StandardEmbossing visualizator: <br />
-      1: {
-        defaultValuesStandardEmbossing.cover_front_standard_embossing_line1
-      }{" "}
-      <br />
-      2: {
-        defaultValuesStandardEmbossing.cover_front_standard_embossing_line2
-      }{" "}
-      <br />
-      3: {
-        defaultValuesStandardEmbossing.cover_front_standard_embossing_line3
-      }{" "}
-      <br />
-      color: {defaultValuesStandardEmbossing.cover_front_embossing_color} <br />
-      placement:{" "}
-      {
-        defaultValuesStandardEmbossing.cover_front_standard_embossing_placement
+      1: {standardEmbossing.cover_front_standard_embossing_line1} <br />
+      2: {standardEmbossing.cover_front_standard_embossing_line2} <br />
+      3: {standardEmbossing.cover_front_standard_embossing_line3} <br />
+      color: {standardEmbossing.cover_front_embossing_color} <br />
+      placement: {
+        standardEmbossing.cover_front_standard_embossing_placement
       }{" "}
       <br />
     </div>

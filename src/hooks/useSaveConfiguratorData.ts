@@ -38,14 +38,3 @@ const useSaveConfiguratorData = () => {
 };
 
 export default useSaveConfiguratorData;
-
-// if (sectionValue) {
-//   const filteredSection = Object.fromEntries(
-//     Object.entries(sectionValue).filter(
-//       ([_, value]) =>
-//         value !== "" && value !== null && value !== undefined
-//     )
-//   );
-//   console.log("filteredSection", filteredSection);
-//   mergedData = { ...mergedData, ...filteredSection };
-// }

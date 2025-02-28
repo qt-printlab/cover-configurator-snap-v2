@@ -7,13 +7,30 @@
   padding: 10px;
   box-sizing: border-box;
 
-  .containerWithLinesEmbossing {
+  .containerWithLinesAndHint {
     display: flex;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+    .containerWithLinesEmbossing {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .containerHintExtraPayment {
+      display: flex;
+      align-items: flex-start;
+
+      gap: 5px;
+
+      .hintExtraPaymentStandardEmbossing {
+        margin: 0px;
+        font-size: 14px;
+        color: var(--hint-standardEmbossing-extraPayment-color);
+      }
+    }
   }
 
   .contentEmbossingBlockWithSelect {

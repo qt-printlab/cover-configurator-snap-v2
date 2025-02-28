@@ -9,6 +9,7 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   showClear?: boolean;
   resetField?: () => void;
   readOnly?: boolean;
+  invalidCaracters?: string;
 }
 
 export const Input: React.FC<InputProps> = ({
@@ -27,6 +28,7 @@ export const Input: React.FC<InputProps> = ({
   readOnly,
   onBlur,
   onFocus,
+  invalidCaracters,
   ...restProps
 }) => {
   return (
@@ -56,7 +58,11 @@ export const Input: React.FC<InputProps> = ({
           ✕
         </button>
       )}
-      {error && <span className={styles.errorMessage}>{error.message}</span>}
+      {error && (
+        <span className={styles.errorMessage}>
+          {error.message} {invalidCaracters && invalidCaracters}
+        </span>
+      )}
     </div>
   );
 };

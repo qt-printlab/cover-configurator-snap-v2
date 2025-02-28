@@ -33,7 +33,6 @@ export const getCoverDataThunk = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const response = await getCoverData();
-
       if (response) {
         return response.data;
       }

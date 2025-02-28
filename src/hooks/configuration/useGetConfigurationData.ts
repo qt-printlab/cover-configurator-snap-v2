@@ -7,10 +7,13 @@ import { useDispatch } from "react-redux";
 import { useMutationObserver } from "../useMutationObserver";
 import { useCallback, useEffect } from "react";
 import { store } from "../../redux/store/store";
+import { useSelector } from "react-redux";
 
 const useGetConfigurationData = () => {
   const dispatch = useDispatch();
-
+  const isCoverDataExist = useSelector(
+    (state: any) => state.albumConfiguration.coverData
+  );
   //open configurator button
   const attachButtonHandler = () => {
     const buttonOpenConfigurator = getElementById("configuratorOpenButton");

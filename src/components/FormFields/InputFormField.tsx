@@ -22,6 +22,7 @@ type InputFormFieldProps = {
   type?: "text" | "number" | "email" | "password" | "search";
   readonly?: boolean;
   onValidationStateChange?: (state: boolean) => void;
+  invalidCaracters?: string;
 };
 
 export const InputFormField: React.FC<InputFormFieldProps> = ({
@@ -34,6 +35,7 @@ export const InputFormField: React.FC<InputFormFieldProps> = ({
   maxLength,
   type = "text",
   readonly,
+  invalidCaracters,
   onValidationStateChange,
 }) => {
   const {
@@ -65,6 +67,7 @@ export const InputFormField: React.FC<InputFormFieldProps> = ({
           containerClassName={containerClassName}
           type={type}
           readOnly={readonly}
+          invalidCaracters={invalidCaracters}
           onBlur={(e) => {
             onBlur();
             trigger(name);

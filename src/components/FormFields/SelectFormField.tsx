@@ -15,6 +15,7 @@ interface SelectFormFieldProps {
   disabled?: boolean;
   selectClassName?: string;
   errorClassName?: string;
+  onChange?: (selectedValue: string, oldValue?: string | undefined) => void;
 }
 
 export const SelectFormField: React.FC<SelectFormFieldProps> = ({
@@ -25,6 +26,7 @@ export const SelectFormField: React.FC<SelectFormFieldProps> = ({
   disabled,
   selectClassName,
   errorClassName,
+  onChange,
 }) => {
   const { control } = useFormContext();
 
@@ -37,6 +39,13 @@ export const SelectFormField: React.FC<SelectFormFieldProps> = ({
         <>
           <Select
             {...field}
+            onChange={(event) => {
+              const oldValue = field.value;
+              field.onChange(event.target.value);
+              if (onChange) {
+                onChange(event.target.value, oldValue);
+              }
+            }}
             options={options}
             placeholder={placeholder}
             disabled={disabled}

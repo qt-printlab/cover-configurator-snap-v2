@@ -17,6 +17,10 @@ import { ConfigurationState } from "../../../redux/slices/formSlice";
 
 const FormArea = () => {
   const defaultValues = useSelector((state: any) => state.formState);
+  const coverData = useSelector(
+    (state: any) => state.albumConfiguration.coverData
+  );
+
   const methods = useForm({ defaultValues, mode: "onChange" });
   const dispatch = useDispatch();
 
@@ -37,12 +41,14 @@ const FormArea = () => {
   const onSubmit = async (data: ConfigurationState) => {
     try {
       const savedFormData = savedData(data);
+      console.log("savedFormData", savedFormData);
 
       dispatch(setIsModalOpen(false));
     } catch (error) {
       console.error("ERROR", error);
     }
   };
+
   return (
     <FormProvider {...methods}>
       <div className={styles.wrapperFormArea}>

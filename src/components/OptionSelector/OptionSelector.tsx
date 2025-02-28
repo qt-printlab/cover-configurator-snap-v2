@@ -12,12 +12,14 @@ interface OptionSelectorProps {
     src: string;
   }[];
   itemClassName?: string;
+  onChange?: (selectedId: number) => void;
 }
 
 const OptionSelector: React.FC<OptionSelectorProps> = ({
   name,
   options,
   itemClassName,
+  onChange,
 }) => {
   const { control } = useFormContext();
 
@@ -27,22 +29,29 @@ const OptionSelector: React.FC<OptionSelectorProps> = ({
       name={name}
       render={({ field }) => (
         <div className={style.optionSelectorWrapper}>
-          {options.map((option) => (
-            <div
-              key={option.id}
-              onClick={() => field.onChange(option.id)}
-              className={style.containerWithOptions}
-            >
-              <Image
-                className={clsx(itemClassName, {
-                  [style.selectedClassName || ""]: option.id === field.value,
-                })}
-                src={option.src}
-                alt={option.label}
-              />
-              <span className={style.itemLabel}>{option.label}</span>
-            </div>
-          ))}
+          {options.map((option) => {
+            return (
+              <div
+                key={option.id}
+                onClick={() => {
+                  field.onChange(option.id);
+                  if (onChange) {
+                    onChange(option.id);
+                  }
+                }}
+                className={style.containerWithOptions}
+              >
+                <Image
+                  className={clsx(itemClassName, {
+                    [style.selectedClassName || ""]: option.id === field.value,
+                  })}
+                  src={option.src}
+                  alt={option.label}
+                />
+                <span className={style.itemLabel}>{option.label}</span>
+              </div>
+            );
+          })}
         </div>
       )}
     />

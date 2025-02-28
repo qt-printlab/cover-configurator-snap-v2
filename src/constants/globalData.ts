@@ -81,3 +81,7 @@ export const visualizerComponentsMap: Record<string, React.FC> = {
   standardEmbossing: StandardEmbossingView,
   spineEmbossing: SpineEmbossingView,
 };
+
+export const ONLY_DATES_REG_EXP = /^[0-9./-]+$/;
+export const ONLY_LETTERS_REG_EXP =
+  /^[A-Za-z!,-./'&+:'`~¨^Øø#˅ĄąÆÄäàáæËëęĘÉéöÖóÓśŚŁłżŻĆźćŃńÜüßÅå\s]+$/;
